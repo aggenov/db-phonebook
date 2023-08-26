@@ -1,14 +1,14 @@
 const express = require("express");
 const {
   getContactController,
-  addContactController, removeContactController
+  addContactController,
+  removeContactController,
 } = require("../controllers/contactsControllersl");
 const validateBody = require("../middlewares/validateBody");
 const addContactSchema = require("../schemas/contactsSchema");
-const checkIsValidId = require("../middlewares/isValidId")
+const checkIsValidId = require("../middlewares/isValidId");
 
-
-console.log(addContactSchema)
+// console.log(addContactSchema)
 
 const router = express.Router();
 
