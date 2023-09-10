@@ -1,14 +1,15 @@
 const express = require("express");
 
 const authRouter = express.Router();
-const addUser = require("../controllers/usersControllers");
+const { addUser, login } = require("../controllers/usersControllers");
+const authentificate = require("../middlewares/authentificate");
 
 authRouter.post("/signup", addUser);
 
-// authRouter.post("/login");
+authRouter.post("/login", login);
 
 // authRouter.post("/logout");
 
-// authRouter.get("/current",);
+authRouter.get("/current", authentificate);
 
 module.exports = authRouter;

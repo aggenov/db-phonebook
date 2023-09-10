@@ -8,8 +8,6 @@ const validateBody = require("../middlewares/validateBody");
 const addContactSchema = require("../schemas/contactsSchema");
 const checkIsValidId = require("../middlewares/isValidId");
 
-// console.log(addContactSchema)
-
 const router = express.Router();
 
 router.get("/", getContactController);
